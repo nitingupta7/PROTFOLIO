@@ -3,51 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Protfolio Website</title>
-    <link rel="stylesheet" href="STYLE.CSS">
+    <title>Nitin Gupta - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
 </head>
 <body>
-    <div class="protfolio-container">
-        <ul class="navlist">
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">Resume</a></li>
+    <div class="portfolio-container">
+        <div class="mobile-nav">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <button class="toggle-btn" id="darkModeToggle">
+                <i class="fas fa-sun"></i>
+            </button>
+        </div>
+
+        <nav>
+            <ul class="navlist">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="toggle-btn desktop-toggle" id="darkModeToggleDesktop">
+                <i class="fas fa-sun"></i>
+            </button>
+        </nav>
+
+        <div class="main-content">
+            <div class="left-container">
+                <div class="content">
+                    <p class="intro">Hi! I'm <span id="name-span"></span></p>
+                    <h1>Web Developer.</h1>
+                    <p class="detail">
+                        I am currently in 2nd year of B.Tech in Mathematics and Computing at RGIPT, an Institute of National Importance.
+                        I love to do DSA and Web Development.
+                        I am deeply interested in starting a new startup for my country.
+                    </p>
+                    <div class="btn-container">
+                        <button id="generateQuote">Generate Quote</button>
+                        <p id="quoteDisplay"></p>
+                    </div>
+                </div>
+            </div>
             
-            <li><a href="#">Project</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-
-<div class="left-container">
-
-<div class="icons">
-    <i class="fa-brands fa-linkedin-in"></i>
-    <i class="fa-brands fa-twitter"></i>
-    <i class="fa-brands fa-facebook"></i>
-    <i class="fa-brands fa-telegram"></i>
-</div>
-<div class="content">
-<p class="intro">Hi! I'am <span>Nitin Gupta</span></p>
-<h1>Web Devloper.</h1>
-
-<p class="detail">
-     I am currently in 1st year Of Btech in Mathematics and Computing at Rgipt, an Institute Of National Importance.
-    I love to do Dsa and Web Development.
-    I am deep interested in doing a New Startup For my Country.</p>
-<div class="btn-container">
-    <button>Hire Me</button>
-    <button>View Project</button>
-</div>
-
-</div>
-</div>
-<div class="right-container"></div>
-<div class="design">
-    <div class="circle"></div>
-    <div class="circle"></div>
-</div>
-
-
+            <div class="right-container">
+                <div class="icons">
+                    <a href="https://www.linkedin.com/in/nitin-gupta-b6b80b28b/" class="icon-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/nitingupta7" class="icon-link"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+            
+            <div class="design">
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+        </div>
     </div>
+
+    <section id="education">
+        <h2>Education</h2>
+        <div class="table-container">
+            <table>
+                <tr><th>Degree</th><th>Institution</th><th>Year</th></tr>
+                <tr><td>B.Tech</td><td>RGIPT</td><td>2027</td></tr>
+            </table>
+        </div>
+    </section>
+    
+    <section id="skills">
+        <div class="container">
+            <h2 class="my-skill">My Skills</h2>
+            <div class="skills-container">
+                <div class="skill">
+                    <div class="skill-name">HTML</div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 90%;">90%</div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">CSS</div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%;">80%</div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">JavaScript</div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 70%;">70%</div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">DSA</div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 60%;">60%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form class="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
